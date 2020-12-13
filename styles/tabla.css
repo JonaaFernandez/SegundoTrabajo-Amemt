@@ -1,0 +1,19 @@
+.border-derecha {
+    border-right: solid black 2px;
+}
+
+.border-abajo {
+    border-bottom: solid black 2px;
+}
+
+.border-izquierda {
+    border-left: solid black 2px;
+}
+
+.border-arriba {
+    border-top: solid black 2px;
+}
+
+.rojo {
+    background-color: red;
+}
