@@ -65,31 +65,72 @@
                 </thead>
             </table> -->
             </div>
+        </div>
 
+        <!-- MODAL AGREGAR-->
 
-            <div class="mt-2">
-                <form action="">
-                    <label class="font-weight-bold" for="">Nombre</label>
-                    <input type="text" name="nombre" id="nombre">
+        <button type="button" class="btn btn-primary ml-3 mt-4" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Agregar</button>
 
-                    <label class="font-weight-bold" for="">Apellido</label>
-                    <input class="mr-4" type="text" name="apellido" id="apellido">
-                    <div class="">
-                        <label class="font-weight-bold" for="">Email</label>
-                        <input class="ml-3" type=" text" name="email" id="email">
-
-                        <label class="font-weight-bold " for=" ">Tema</label>
-                        <input class="ml-4" type="text" name="tema" id="tema">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ingresa tus datos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
                     </div>
-                    <div class="d-flex">
-                        <input type="button" name="agregar" id="agregar" value="Agregar" class="bg-dark text-warning p-1 text-center mt-2 mx-auto">
+                    <div class="modal-body"></div>
+                    <form>
+                        <div class="form-group container">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" id="nombreModal" class="form-control" id="recipient-name">
 
+                            <label for="recipient-name" class="col-form-label">Apellido:</label>
+                            <input type="text" id="apellidoModal" class="form-control" id="recipient-name">
+
+                            <label for="recipient-name" class="col-form-label">Email:</label>
+                            <input type="text" id="emailModal" class="form-control" id="recipient-name">
+
+                            <label for="recipient-name" class="col-form-label">Tema:</label>
+                            <input type="text" id="temaModal" class="form-control" id="recipient-name">
+                        </div>
+
+                    </form>
+
+                    <div class="modal-footer">
+                        <button type="button" id="agregar-Modal" data-dismiss="modal" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
-                </form>
+                </div>
             </div>
-
         </div>
     </div>
+    <!-- MODAL BORRAR -->
+    <button type="button" class="btn btn-primary ml-3 mt-4" id="eliminar-boton-modal" data-toggle="modal" data-target="#exampleModal2" data-whatever="@getbootstrap">Eliminar</button>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2"> ¿Eliminar comentario?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body container">
+                    <p>Si elimina elimina el comentario, quedara fuera del sorteo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="borrarModal" data-dismiss="modal" class="btn btn-primary">Confirmar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
 
 
 
