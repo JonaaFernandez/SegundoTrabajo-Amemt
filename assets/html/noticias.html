@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/custom-1.css">
+    <link rel="stylesheet" href="../styles/tabla.css">
     <title>News</title>
 </head>
 
@@ -26,7 +27,7 @@
 
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item "><a href="../../index.html" class="nav-link">Home<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item "><a href="../html/index.html" class="nav-link">Home<span class="sr-only">(current)</span></a></li>
                         <li class="nav-item active"><a href="../html/noticias.html" class="nav-link">Noticias</a></li>
                         <li class="nav-item"><a href="../html/historia.html" class="nav-link">Historia</a></li>
                         <li class="nav-item"><a href="../html/tickets.html" class="nav-link">Tickets</a></li>
@@ -36,11 +37,62 @@
         </nav>
     </div>
 
+    <div class="container">
 
-    <div class="d-flex justify-content-center mt-4 col-sm-12 mx-auto centado">
-        <h1 class="display-5 centado">Pagina en Mantenimiento</h1>
+        <h2> Sumate a la votacion por el mejor tema del 2020 !!!</h2>
+        <p>Solo por esta semana, quienes voten y sugieran temas para ver cual se consagra el mas escuchado del año participa por grandes premios. Para saber mas haz click <span>AQUI</span>. </p>
+
+
+
+
+        <div class="col-lg-12">
+            <div id="tablita">
+
+                <!-- <table>
+                <thead>
+                    <tr>
+                        <th>Tema</th>
+                        <th>Nombre </th>
+                        <th>Apellido</th>
+                        <th>Ciudad-Pais</th>
+                        <th>Instagram</th>
+                        <th>E-mail</th>
+                    </tr>
+                    
+                    <tbody id="bodyTabla">
+
+                    </tbody>
+                </thead>
+            </table> -->
+            </div>
+
+
+            <div class="mt-2">
+                <form action="">
+                    <label class="font-weight-bold" for="">Nombre</label>
+                    <input type="text" name="nombre" id="nombre">
+
+                    <label class="font-weight-bold" for="">Apellido</label>
+                    <input class="mr-4" type="text" name="apellido" id="apellido">
+                    <div class="">
+                        <label class="font-weight-bold" for="">Email</label>
+                        <input class="ml-3" type=" text" name="email" id="email">
+
+                        <label class="font-weight-bold " for=" ">Tema</label>
+                        <input class="ml-4" type="text" name="tema" id="tema">
+                    </div>
+                    <div class="d-flex">
+                        <input type="button" name="agregar" id="agregar" value="Agregar" class="bg-dark text-warning p-1 text-center mt-2 mx-auto">
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </div>
-    <img src="../images/mantenimiento.jpg" class="w-50 container d-flex" alt="">
+
+
+
 
     <!-- Footer -->
     <footer class="page-footer font-small stylish-color-dark pt-4 ">
@@ -125,9 +177,36 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
-
+    <script src="../js/tabla.js "></script>
 
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+<!-- <div class="modal " tabindex="-1 ">
+    <div class="modal-dialog ">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title ">Modal title</h5>
+                <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+                            <span aria-hidden="true ">&times;</span>
+                          </button>
+            </div>
+            <div class="modal-body ">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer ">
+                <button type="button " class="btn btn-secondary " data-dismiss="modal ">Close</button>
+                <button type="button " class="btn btn-primary ">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div> -->
