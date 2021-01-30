@@ -4,6 +4,8 @@ const tablita = document.getElementById('tablita');
 
 function iniciarPagina() { // carga pagina por completo
 
+
+
     /*tabla fija de ejemplo */
     let cargaEjemplo = [{
             "Nombre": "Carlos",
@@ -172,7 +174,7 @@ function iniciarPagina() { // carga pagina por completo
         document.getElementById("apellidoModal").value = "";
         document.getElementById("emailModal").value = "";
         document.getElementById("temaModal").value = "";
-
+        progressBar();
         cargaEjemplo.push(ingreso);
         limpiartabla();
         crearTablas(cargaEjemplo);
@@ -232,19 +234,45 @@ function iniciarPagina() { // carga pagina por completo
 
     }
 
-    let barritaProgress = document.getElementById("modalBarrita");
-    barritaProgress
+    /* let modalAgregar = document.getElementById("exampleModal"); */
 
-
-    /* function cargarBarrita() {
-        let progressBar = document.getElementById("barritaModal");
-        progressBar.setAttribute("aria-valuenow", 0);
-        progressBar.style.width = `0%`;
-        console.log("PUTO");
+    function esconderBarrita() {
+        let barrita = document.getElementById("progressBar");
+        barrita.classList.add("d-none");
     }
-    cargarBarrita(); */
-} //iniciar pagina
 
+    function esconderModal() {
+        let modalAgregar = document.getElementById("exampleModal");
+        modalAgregar.classList.add("d-none");
+
+    }
+
+    function progressBar() {
+        let width = 0;
+        let contenedorBarrita = document.getElementById("barritaContainer");
+        let barrita = document.getElementById("progressBar");
+        let contadorParaCarga = setInterval(cargadorBarrita, 0);
+
+        function cargadorBarrita() {
+            barrita.classList.remove("d-none");
+            if (width >= 100) {
+                clearInterval(contadorParaCarga);
+
+                setTimeout(function() {
+                    contenedorBarrita.style.width = 0 + "%";
+                    esconderBarrita();
+                    esconderModal();
+                }, 1000);
+                console.log("ENTRO ACA EN EL IF");
+            } else {
+                console.log("ENTRO ACA");
+                width++;
+                contenedorBarrita.style.width = width + "%";
+            }
+        }
+    } //iniciar pagina
+
+}
 document.addEventListener("DOMContentLoaded", iniciarPagina);
 
 // e.target.dataset.id accedo a la propiedad del html
