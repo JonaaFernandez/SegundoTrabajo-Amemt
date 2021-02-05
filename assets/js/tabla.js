@@ -11,32 +11,87 @@ function iniciarPagina() { // carga pagina por completo
             "Nombre": "Carlos",
             "Apellido": "Medina",
             "Email": "carlitos@blalba.com",
-            "Tema": "Rather Be"
+            "Tema": "Rather Be",
+            "Año": "2014"
+
         },
         {
             "Nombre": "Juana",
             "Apellido": "Alberdi",
             "Email": "coquito@blablba.com",
             "Tema": "Miss you",
+            "Año": "2000"
+
         },
         {
-            "Nombre": "Ernesto",
-            "Apellido": "Melastengue",
-            "Email": "ernest@blalba.com",
+            "Nombre": "Melani",
+            "Apellido": "Cardenas",
+            "Email": "Mela@blalba.com",
             "Tema": "Real love",
+            "Año": "2000"
+
+        },
+        {
+            "Nombre": "Joaquin",
+            "Apellido": "Marredo",
+            "Email": "roaM@blalba.com",
+            "Tema": "Miss You",
+            "Año": "2000"
+
+        },
+        {
+            "Nombre": "Nicolas",
+            "Apellido": "Benavi",
+            "Email": "nico@blalba.com",
+            "Tema": "Rather be",
+            "Año": "2014"
+
+        },
+        {
+            "Nombre": "Rita",
+            "Apellido": "Celeste",
+            "Email": "riti@blalba.com",
+            "Tema": "Symphony",
+            "Año": "2000"
+
         },
         {
             "Nombre": "Federica",
             "Apellido": "Miguel",
             "Email": "fede@blalba.com",
             "Tema": "Real love",
+            "Año": "2001"
+
         },
         {
             "Nombre": "Mirtha",
             "Apellido": "Mabel",
             "Email": "mirthi@blalba.com",
-            "Tema": "Mama"
+            "Tema": "Mama",
+            "Año": "2012"
+
+        }, {
+            "Nombre": "Clara",
+            "Apellido": "Oscura",
+            "Email": "oscucla@blalba.com",
+            "Tema": "Rather Be",
+            "Año": "2014"
+
+        }, {
+            "Nombre": "Miguel",
+            "Apellido": "Del Campo",
+            "Email": "miguel@blalba.com",
+            "Tema": "Rather be",
+            "Año": "2014"
+        }, {
+            "Nombre": "Oscar",
+            "Apellido": "Clima",
+            "Email": "osqui@blalba.com",
+            "Tema": "Mama",
+            "Año": "2012"
+
         }
+
     ]
 
     /* Declaro variables de ambito global */
@@ -53,6 +108,7 @@ function iniciarPagina() { // carga pagina por completo
         let casilleroApellido = document.createElement("th");
         let casilleroEmail = document.createElement("th");
         let casilleroTema = document.createElement("th");
+        let casilleroAnio = document.createElement("th");
         let casilleroAcciones = document.createElement("th");
 
         /* estilo a la tabla */
@@ -60,6 +116,7 @@ function iniciarPagina() { // carga pagina por completo
         casilleroApellido.classList.add("bg-light", "text-dark", "p-2", "border-derecha", "border-arriba", "border-abajo", "text-center");
         casilleroEmail.classList.add("bg-light", "text-dark", "p-2", "border-derecha", "border-arriba", "border-abajo", "text-center");
         casilleroTema.classList.add("bg-light", "text-dark", "p-2", "border-derecha", "border-arriba", "border-abajo", "text-center");
+        casilleroAnio.classList.add("bg-light", "text-dark", "p-2", "border-derecha", "border-arriba", "border-abajo", "text-center");
         casilleroAcciones.classList.add("bg-light", "text-dark", "p-2", "border-derecha", "border-arriba", "border-abajo", "text-center");
 
         /* texto interno del header */
@@ -67,6 +124,7 @@ function iniciarPagina() { // carga pagina por completo
         casilleroApellido.innerText = "Apellido";
         casilleroEmail.innerText = "Email";
         casilleroTema.innerText = "Tema";
+        casilleroAnio.innerText = "Año";
         casilleroAcciones.innerText = "Acciones";
 
         /* armado uno dentro de otro */
@@ -74,6 +132,7 @@ function iniciarPagina() { // carga pagina por completo
         fila.appendChild(casilleroApellido);
         fila.appendChild(casilleroEmail);
         fila.appendChild(casilleroTema);
+        fila.appendChild(casilleroAnio);
         fila.appendChild(casilleroAcciones);
         tHeader.appendChild(fila);
 
@@ -87,6 +146,7 @@ function iniciarPagina() { // carga pagina por completo
             let apellido = document.createElement("td");
             let email = document.createElement("td");
             let tema = document.createElement("td");
+            let anio = document.createElement("td");
 
             /* botones EDITAR Y ELIMINAR en cada fila,  */
             let btnBorrar = document.createElement("button");
@@ -97,6 +157,7 @@ function iniciarPagina() { // carga pagina por completo
             apellido.classList.add("bg-dark", "text-light", "p-2", "border-derecha", "border-abajo", "text-center");
             email.classList.add("bg-dark", "text-light", "p-2", "border-derecha", "border-abajo", "text-center");
             tema.classList.add("bg-dark", "text-light", "p-2", "border-derecha", "border-abajo", "text-center");
+            anio.classList.add("bg-dark", "text-light", "p-2", "border-derecha", "border-abajo", "text-center");
             btnEdit.classList.add("bg-dark", "text-primary", "p-2", "border-derecha", "border-abajo", "text-center");
             btnBorrar.classList.add("bg-dark", "text-primary", "p-2", "border-derecha", "border-abajo", "text-center");
 
@@ -106,6 +167,7 @@ function iniciarPagina() { // carga pagina por completo
             apellido.innerText = arr[i].Apellido;
             email.innerText = arr[i].Email;
             tema.innerText = arr[i].Tema;
+            anio.innerText = arr[i].Año;
 
             btnBorrar.innerText = "Eliminar";
             btnEdit.innerText = "Editar";
@@ -137,6 +199,7 @@ function iniciarPagina() { // carga pagina por completo
             fila.appendChild(apellido);
             fila.appendChild(email);
             fila.appendChild(tema);
+            fila.appendChild(anio);
             fila.appendChild(btnBorrar);
             fila.appendChild(btnEdit);
             tbody.appendChild(fila);
@@ -271,9 +334,65 @@ function iniciarPagina() { // carga pagina por completo
 
         }
     }
+
+
+    /* Sacado de internet, utilizado con query */
+    $(`#ejemplito`).on(`keyup`, function() {
+        let value = $(this).val()
+        console.log("Busqueda avanzada: ", value)
+        let data = buscarPorNombre(value, cargaEjemplo)
+        crearTablas(data);
+    })
+
+    crearTablas(cargaEjemplo)
+
+    function buscarPorNombre(value, data) {
+        let dataFiltrada = [];
+
+        for (let i = 0; i < data.length; i++) {
+            value = value.toLowerCase()
+            let Nombre = data[i].Nombre.toLowerCase();
+
+            if (Nombre.includes(value)) {
+                dataFiltrada.push(data[i])
+            }
+            /* 
+                       ESTO NO FUNCIONABA DEL TODO BIEN, poreso lo deje comentado
+                       else {
+                           let resultadoBusqueda = document.getElementById("resultadoBusqueda");
+                           resultadoBusqueda.innerText = "No se encontraron resultados con ese Nombre"
+                       } */
+
+        }
+        return dataFiltrada
+    }
+
+    let inputBusquedaAvanzada = document.getElementById("filtroBusqueda"); //input busqueda avanzada
+    let botonBusquedaAvanzada = document.getElementById("botonBusqueda"); // BOTON busqueda avanzada
+    botonBusquedaAvanzada.addEventListener('click', filtrarPorFecha); // listener
+
+    function filtrarPorFecha() {
+        const filtro = cargaEjemplo.filter(e => e.Año == inputBusquedaAvanzada.value)
+            /* console.log(inputBusquedaAvanzada.value); */
+            /* console.log(filtro); */
+        crearTablas(filtro);
+    }
+
+    let resetBoton = document.getElementById("botonReset");
+    resetBoton.addEventListener("click", resetearBusqueda);
+
+    function resetearBusqueda() {
+        crearTablas(cargaEjemplo);
+        inputBusquedaAvanzada.value = '';
+    }
+
+    let divBusquedaAvanzada = document.getElementById("divBusquedaAvanzada");
+    let btnAbrirBusquedaAvanzada = document.getElementById("btnBusquedaAvanzada");
+    btnAbrirBusquedaAvanzada.addEventListener("click", function() {
+        divBusquedaAvanzada.classList.remove("d-none");
+    })
+
     //iniciar pagina
 
 }
 document.addEventListener("DOMContentLoaded", iniciarPagina);
-
-// e.target.dataset.id accedo a la propiedad del html
