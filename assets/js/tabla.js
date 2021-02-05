@@ -225,18 +225,22 @@ function iniciarPagina() { // carga pagina por completo
         let apellido = document.getElementById("apellidoModal");
         let email = document.getElementById("emailModal");
         let tema = document.getElementById("temaModal");
+        let anio = document.getElementById("anioModal");
         console.log(nombre.value);
         let ingreso = {
             "Nombre": nombre.value,
             "Apellido": apellido.value,
             "Email": email.value,
-            "Tema": tema.value
+            "Tema": tema.value,
+            "Año": anio.value
         }
 
         document.getElementById("nombreModal").value = "";
         document.getElementById("apellidoModal").value = "";
         document.getElementById("emailModal").value = "";
         document.getElementById("temaModal").value = "";
+        document.getElementById("anioModal").value = "";
+
         progressBar();
         cargaEjemplo.push(ingreso);
         limpiartabla();
@@ -252,11 +256,13 @@ function iniciarPagina() { // carga pagina por completo
         let apellido = document.getElementById("apellidoModalEditar");
         let email = document.getElementById("emailModalEditar");
         let tema = document.getElementById("temaModalEditar");
+        let anio = document.getElementById("anioModalEditar");
 
         nombre.value = cargaEjemplo[pos].Nombre;
         apellido.value = cargaEjemplo[pos].Apellido;
         email.value = cargaEjemplo[pos].Email;
         tema.value = cargaEjemplo[pos].Tema;
+        anio.value = cargaEjemplo[pos].Año;
         limpiartabla();
         crearTablas(cargaEjemplo);
 
@@ -268,12 +274,15 @@ function iniciarPagina() { // carga pagina por completo
         let apellido = document.getElementById("apellidoModalEditar");
         let email = document.getElementById("emailModalEditar");
         let tema = document.getElementById("temaModalEditar");
+        let anio = document.getElementById("anioModalEditar");
 
 
         cargaEjemplo[pos].Nombre = nombre.value;
         cargaEjemplo[pos].Apellido = apellido.value;
         cargaEjemplo[pos].Email = email.value;
         cargaEjemplo[pos].Tema = tema.value;
+        cargaEjemplo[pos].Año = anio.value;
+
         progressBar();
         limpiartabla();
 
