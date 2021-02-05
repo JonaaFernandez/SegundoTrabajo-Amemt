@@ -177,7 +177,6 @@ function iniciarPagina() { // carga pagina por completo
         progressBar();
         cargaEjemplo.push(ingreso);
         limpiartabla();
-        crearTablas(cargaEjemplo);
 
         /*   btnEdit.removeEventListener("click", (e) => cargaEditar(parseInt(e.target.dataset.target)));
           btnEdit.addEventListener("click", (e) => cargaEditar(parseInt(e.target.dataset.target))); */
@@ -197,6 +196,7 @@ function iniciarPagina() { // carga pagina por completo
         tema.value = cargaEjemplo[pos].Tema;
         limpiartabla();
         crearTablas(cargaEjemplo);
+
     }
 
     function confirmarEditar(pos) {
@@ -211,9 +211,9 @@ function iniciarPagina() { // carga pagina por completo
         cargaEjemplo[pos].Apellido = apellido.value;
         cargaEjemplo[pos].Email = email.value;
         cargaEjemplo[pos].Tema = tema.value;
-
+        progressBar();
         limpiartabla();
-        crearTablas(cargaEjemplo);
+
 
     }
 
@@ -224,8 +224,8 @@ function iniciarPagina() { // carga pagina por completo
         } else {
             cargaEjemplo.splice(pos, 1);
         }
+        progressBar();
         limpiartabla();
-        crearTablas(cargaEjemplo);
     }
 
     function limpiartabla() {
@@ -233,8 +233,6 @@ function iniciarPagina() { // carga pagina por completo
         tHeader.innerHTML = "";
 
     }
-
-    /* let modalAgregar = document.getElementById("exampleModal"); */
 
     function esconderBarrita() {
         let barrita = document.getElementById("progressBar");
@@ -262,6 +260,7 @@ function iniciarPagina() { // carga pagina por completo
                     contenedorBarrita.style.width = 0 + "%";
                     esconderBarrita();
                     esconderModal();
+                    crearTablas(cargaEjemplo);
                 }, 1000);
                 console.log("ENTRO ACA EN EL IF");
             } else {
@@ -269,8 +268,10 @@ function iniciarPagina() { // carga pagina por completo
                 width++;
                 contenedorBarrita.style.width = width + "%";
             }
+
         }
-    } //iniciar pagina
+    }
+    //iniciar pagina
 
 }
 document.addEventListener("DOMContentLoaded", iniciarPagina);
